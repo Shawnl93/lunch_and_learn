@@ -13,7 +13,7 @@ RSpec.describe 'user endpoint' do
             
         expect(response).to be_successful
         data = JSON.parse(response.body, symbolize_names: true)
-        expect(response.status).to eq(200)
+        expect(response.status).to eq(201)
         expect(data[:data]).to be_a(Hash)
         expect(data[:data]).to have_key(:id)
         expect(data[:data]).to have_key(:type)
