@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :recipes
       resources :learning_resources
       resources :users
+      resources :favorites
     end
   end
 end

@@ -2,8 +2,9 @@ class User < ApplicationRecord
     validates_presence_of :name
     validates_presence_of :email
     validates :email, uniqueness: true
-    validates :api_key, uniqueness: true
-
+    # validates :api_key, uniqueness: true
+    has_many :favorites
+    
     after_create :gen_key
 
     private
