@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'recipes endpoint' do
-    it "returns recipes by country" do
+RSpec.describe 'recipes endpoint', :vcr do
+    it "returns recipes by country", :vcr do
        get "/api/v1/recipes?country=thailand" 
        
        expect(response).to be_successful
@@ -41,7 +41,7 @@ RSpec.describe 'recipes endpoint' do
        expect(recipe[:data][0][:attributes]).to_not have_key(:dietLabels)
     end
 
-    it "returns empty array if no recipes available" do
+    it "returns empty array if no recipes available", :vcr do
         get "/api/v1/recipes?country=" 
 
         expect(response).to be_successful

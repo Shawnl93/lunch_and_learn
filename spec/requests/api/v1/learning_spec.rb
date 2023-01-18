@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'learning endpoint' do
-    it "returns learning resources by country" do
+RSpec.describe 'learning endpoint', :vcr do
+    it "returns learning resources by country", :vcr do
         get "/api/v1/learning_resources?country=laos"
 
         expect(response).to be_successful
