@@ -5,11 +5,11 @@ class User < ApplicationRecord
     # validates :api_key, uniqueness: true
     has_many :favorites
     
-    after_create :gen_key
+    before_create :gen_key
 
     private
 
     def gen_key
-     update(api_key: SecureRandom.alphanumeric(20))
+     self.api_key = SecureRandom.alphanumeric(20)
     end
 end
