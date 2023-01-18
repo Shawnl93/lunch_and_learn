@@ -14,11 +14,11 @@ Lunch and Learn is an application where you can eat your food and learn about it
 
 ## Learning Goals
 
--> Expose an API that aggregates data from multiple external APIs
--> Expose an API that requires an authentication token
--> Expose an API for CRUD functionality
--> Determine completion criteria based on the needs of other developers
--> Test both API consumption and exposure, making use of at least one mocking tool (VCR, Webmock, etc).
+-> Expose an API that aggregates data from multiple external APIs</br>
+-> Expose an API that requires an authentication token</br>
+-> Expose an API for CRUD functionality</br>
+-> Determine completion criteria based on the needs of other developers</br>
+-> Test both API consumption and exposure, making use of at least one mocking tool (VCR, Webmock, etc).</br>
 
 ## Built With
 - Rails 5.2.8
