@@ -23,4 +23,17 @@ RSpec.describe 'user endpoint' do
         expect(data[:data][:attributes]).to have_key(:api_key)
 
     end
+
+    it "cant create user " do
+                user_params = {
+                     "name": "Shawn Lee",
+                    #  "email": "Shawn@gmail.com"
+                     }
+
+        headers = {"CONTENT_TYPE" => "application/json"}
+
+        post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
+            
+        expect(response).to_not be_successful
+    end
 end
